@@ -1,0 +1,10 @@
+.products-wrap{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 50px 50px;
+    margin-top: 50px;
+    // grid-template-rows: 12px 12px 12px;
+    .product-wrap{
+        
+    }
+}
