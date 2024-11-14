@@ -15,8 +15,25 @@
         justify-content: space-between;
     }
     .header-search{
-        width:100px;
-        background-color: black;
+        
+        input{
+            margin: auto;
+            width:200px;
+            height:50px;
+            border-radius: 50px;
+            border-style: none;
+            outline: none;
+            transition: 0.5s;
+            &:focus{
+                left: 25%;
+                width:500px;
+
+            }
+            &:focus .header-search{
+                width:300px;
+
+            }
+        }
     
     }
     .header-card{

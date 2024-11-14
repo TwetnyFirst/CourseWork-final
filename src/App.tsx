@@ -10,6 +10,7 @@ import ProductPage from './Pages/ProductPage/ProductPage';
 import Card from './Components/Card/Card';
 import { useDispatch } from 'react-redux';
 import { getItem } from './Redux/Slice/products';
+import SelectedPage from './Pages/SelectedPage/SelectedPage';
 
 function App() {
 
@@ -27,6 +28,7 @@ function App() {
         <Route path='/' element={<MainPage/>}/>
         <Route path='/Pizza' element={<ProductPage/>}/>
         <Route path='/' element={<MainPage/>}/>
+        <Route path='/:id' element={<SelectedPage/>}/>
       </Routes>
     </BrowserRouter>
   </Theme>

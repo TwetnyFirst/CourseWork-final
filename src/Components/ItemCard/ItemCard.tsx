@@ -18,8 +18,8 @@ function ItemCard({content}:any) {
         </div>
         <div className="card__description">
             <h2 className="card__title">{content.name}</h2>
-            <p className="card__text">{content.ingredients
-            }</p>
+            {/* <p className="card__text">{content.ingredients
+            }</p> */}
             <p className="card__price">{`${content.rating * 4}$`}</p>
             <button onClick={() => dispatch(addToCard(content))}>Add to Card</button>
         </div>

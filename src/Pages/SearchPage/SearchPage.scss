@@ -1,0 +1,29 @@
+.search__wrap{
+    margin: auto;
+    position: relative;
+    z-index: 9999;
+    width:60%;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    background-color: pink;
+    .search__item__wrap{
+        border: 1px solid black;
+        border-radius: 50px;
+        margin: 40px 80px 0px 80px;
+        display: flex;
+        .search__item__left{
+            width: 250px;
+            height: 250px;
+            img{
+                border-radius:50px;
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+            }
+
+        }
+        .search__item__right{
+
+        }
+    }
+}

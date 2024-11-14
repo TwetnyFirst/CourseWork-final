@@ -22,7 +22,7 @@ export const fetchProducts = createAsyncThunk(
 
 export const fetchOneProduct = createAsyncThunk(
     "products/fetchOneProduct",
-    async function(id,{rejectWithValue}){
+    async function(id:any,{rejectWithValue}){
         try{
             const response = await fetch(`https://dummyjson.com/recipes/${id}`);
 
@@ -44,7 +44,8 @@ const productsSlice = createSlice({
         arror:null,
         products:[],
         productsInCard:[],
-        selectedPost:{}
+        selectedPost:{},
+        searchResoult:{}
 
     },
     reducers:{
@@ -101,6 +102,12 @@ const productsSlice = createSlice({
             productsSlice.caseReducers.setItem(current(state.productsInCard));
 
         },
+
+        //Search redusers
+        search(state:any,payload:any){
+            state.searchResoult = state.products.recipes.filter((item:any) => item.name.toLowerCase().includes(payload.payload.toLowerCase()));
+            console.log(state.searchResoult);
+        }
         
 
 
@@ -155,4 +162,4 @@ const {actions,reducer} = productsSlice;
 
 export default reducer;
 
-export const {closeCard,showCard,addToCard,countPlus,countMinus,setItem,getItem} = actions;
+export const {closeCard,showCard,addToCard,countPlus,countMinus,setItem,getItem,search} = actions;
